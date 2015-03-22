@@ -1,0 +1,12 @@
+{
+  "name": "kss-node-template",
+  "scripts": {
+    "build": "./node_modules/.bin/kss-node --config ./kss-template-settings.json"
+  },
+  "version": "0.0.0",
+  "description": "",
+  "author": "@geckotang",
+  "devDependencies": {
+    "kss": "~2.0.2"
+  }
+}

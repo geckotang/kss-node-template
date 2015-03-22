@@ -1,0 +1,18 @@
+{
+  "template": "custom-template",
+  "destination": "demo",
+  "source": "src",
+  "mask": "*.css|*.less|*.sass|*.scss|*.styl|*.stylus",
+  "css": [
+    "public/black-tie/css/black-tie.min.css",
+    "public/kss.css",
+    "public/highlight/github.css",
+    "public/styles.css"
+  ],
+  "js": [
+    "public/kss.js",
+    "public/highlight/highlight.pack.js",
+    "public/init.js"
+  ],
+  "custom": ["Script", "Exec_Script"]
+}

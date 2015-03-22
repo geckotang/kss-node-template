@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>{{site-setting "docTitle"}}</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+  <!-- Styles for Template -->
+  {{{styles}}}
+  <!-- /Styles for Template -->
+</head>
+<body>
+
+
+<div>{{site-setting "docTitle"}}</div>
+
+
+{{!
+  Parameters
+}}
+<ul>
+  <li><a href="./">Overview</a></li>
+{{#eachRoot}}
+  <li>
+    <a href="section-{{referenceURI}}.html">
+      <span>{{#ifNumeric reference}}{{reference}}{{else}}{{autoincrement}}{{/ifNumeric}}</span>
+      <span>{{header}}</span>
+    </a>
+  </li>
+  {{#ifReference ../rootName}}
+    <ul>
+    {{#eachSection reference}}
+      {{#ifDepth 2}}
+        <li>
+          <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">
+            <span>{{#ifNumeric reference}}{{reference}}{{else}}{{autoincrement}}{{/ifNumeric}}</span>
+            <span>{{header}}</span>
+          </a>
+        </li>
+      {{/ifDepth}}
+    {{/eachSection}}
+    </ul>
+  {{/ifReference}}
+{{/eachRoot}}
+</ul>
+
+
+{{#if homepage}}
+  <div id="kssref-0">
+    {{{homepage}}}
+  </div>
+{{else}}
+
+  {{!
+    Display each section, in order.
+
+    The "root" element comes first in this loop, and can be detected using
+    the "#ifDepth 1" block as seen below.
+  }}
+
+  {{#eachSection rootName}}
+  <div id="kssref-{{referenceURI}}" class="--depth-{{depth}}">
+
+    {{!
+      Heading + Paramaters + Description
+    }}
+    <div>
+      {{!
+        Heading
+      }}
+      <div class="--depth-{{depth}}">
+        <a href="#kssref-{{referenceURI}}">
+          <span class="bts bt-link"></span>
+          <span>{{#ifNumeric reference}}{{reference}}{{else}}{{autoincrement}}{{/ifNumeric}}</span>
+          <span>{{header}}</span>
+        </a>
+      </div>
+
+    {{#if parameters}}
+      {{!
+        Parameters
+      }}
+      <ul>
+      {{#eachParameter}}
+        <li>
+          <code class="">{{name}}</code>
+          <div class="">{{{description}}}</div>
+        </li>
+      {{/eachParameter}}
+      </ul>
+    {{/if}}
+
+    {{#if description}}
+      {{!
+        Description
+      }}
+      <div>
+        {{{description}}}
+      </div>
+    {{/if}}
+    </div>
+
+    {{!
+      Preview + Markup + JavaScript
+    }}
+    {{#if markup}}
+
+    <div class="sg-codeblock">
+      <input id="kss-codeblock-{{referenceURI}}-preview" name="kss-codeblock-{{referenceURI}}" class="sg-codeblock__radio  sg-codeblock__radio--preview" type="radio" checked>
+      <input id="kss-codeblock-{{referenceURI}}-markup"  name="kss-codeblock-{{referenceURI}}" class="sg-codeblock__radio  sg-codeblock__radio--markup"  type="radio">
+      {{#if script}}
+      <input id="kss-codeblock-{{referenceURI}}-script"  name="kss-codeblock-{{referenceURI}}" class="sg-codeblock__radio  sg-codeblock__radio--script" type="radio">
+      {{/if}}
+      <div class="sg-codeblock__toolbar">
+        <label for="kss-codeblock-{{referenceURI}}-preview" class="sg-codeblock__btn  sg-codeblock__btn--preview">Preview</label>
+        <label for="kss-codeblock-{{referenceURI}}-markup"  class="sg-codeblock__btn  sg-codeblock__btn--markup">HTML</label>
+        {{#if script}}
+        <label for="kss-codeblock-{{referenceURI}}-script" class="sg-codeblock__btn  sg-codeblock__btn--script">JS</label>
+        {{/if}}
+      </div>
+      <div class="sg-codeblock__body">
+        {{!
+          preview area
+        }}
+        <div class="sg-codeblock__detail  sg-codeblock__detail--preview">
+          <div>Example{{#if modifiers}}s{{/if}}</div>
+          {{#if modifiers}}
+          <div>Default styling</div>
+          {{/if}}
+          <div>{{{markup}}}</div>
+          {{#eachModifier}}
+          <div>{{name}}</div>
+          <div>{{{description}}}</div>
+          <div>{{{markup}}}</div>
+          {{/eachModifier}}
+        </div>
+        {{!
+          markup area
+        }}
+        <div class="sg-codeblock__detail  sg-codeblock__detail--markup">
+          <pre class="sg-codeblock__pre html"><code>{{markup}}</code></pre>
+        </div>
+        {{!
+          script area
+        }}
+        {{#if script}}
+        <div class="sg-codeblock__detail  sg-codeblock__detail--script">
+          <pre class="sg-codeblock__pre css"><code>{{script}}</code></pre>
+          {{#if exec_script}}
+          <script>{{script}}</script>
+          {{/if}}
+        </div>
+        {{/if}}
+      </div>
+    </div>
+    {{/if}}
+
+  </div>
+  {{/eachSection}}
+{{/if}}
+
+<!-- Script for Template -->
+{{{scripts}}}
+<!-- /Script for Template -->
+
+{{site-setting "generatorTag"}}
+
+</body>
+</html>
