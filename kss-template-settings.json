@@ -6,7 +6,7 @@
   "css": [
     "public/black-tie/css/black-tie.min.css",
     "public/kss.css",
-    "public/highlight/github.css",
+    "public/highlight/monokai.css",
     "public/styles.css"
   ],
   "js": [
@@ -14,5 +14,5 @@
     "public/highlight/highlight.pack.js",
     "public/init.js"
   ],
-  "custom": ["Script", "Exec_Script"]
+  "custom": ["Script", "Exec_Script", "Scss_Usage"]
 }

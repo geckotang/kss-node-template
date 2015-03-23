@@ -1,12 +1,17 @@
 {
   "name": "kss-node-template",
   "scripts": {
-    "build": "./node_modules/.bin/kss-node --config ./kss-template-settings.json"
+    "start": "gulp serve",
+    "build": "gulp kss"
   },
   "version": "0.0.0",
   "description": "",
   "author": "@geckotang",
   "devDependencies": {
-    "kss": "~2.0.2"
+    "kss": "~2.0.2",
+    "gulp-watch": "~4.2.0",
+    "gulp": "~3.8.11",
+    "browser-sync": "~2.4.0",
+    "gulp-exec": "~2.1.1"
   }
 }

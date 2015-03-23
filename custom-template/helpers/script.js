@@ -1,6 +1,6 @@
 module.exports.register = function(handlebars) {
 
-  var Kss = require(__dirname + '/../../node_modules/kss/lib/kss.js');
+  var Kss = require(process.cwd() + '/node_modules/kss/lib/kss.js');
 
   handlebars.registerHelper('script', function() {
     var section = new Kss.KssSection(this);

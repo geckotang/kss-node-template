@@ -1,9 +1,77 @@
 /*
+layout
+*/
+html,body {
+  margin: 0;
+  padding: 0;
+}
+.sg-layout {
+  display: table;
+  width: 100vw;
+  height: 100vh;
+}
+.sg-layout__side {
+  display: table-cell;
+  vertical-align: top;
+  width: 20vw;
+  background-color: #171d22;
+}
+.sg-layout__main {
+  display: table-cell;
+  vertical-align: top;
+  background-color: #f4f6f9;
+}
+
+/*
+Document Title
+*/
+.sg-docTitle {
+  font-size: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #364350;
+  font-weight: bold;
+  color: #ecf0f1;
+}
+
+
+/*
+side navigation
+*/
+.sg-sideNav {
+  padding: 10px 20px;
+  margin: 0;
+  list-style: none;
+}
+.sg-sideNav__item >.sg-sideNav {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.sg-sideNav__item {
+  font-weight: bold;
+}
+.sg-sideNav__item--depth-2 {
+  font-weight: normal;
+}
+.sg-sideNav__link {
+  display: block;
+  padding: 5px 0;
+  font-size: 16px;
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: 300ms color linear;
+}
+.sg-sideNav__link:hover {
+  color: #e74c3c;
+}
+.sg-sideNav__num {}
+.sg-sideNav__text {}
+
+/*
 sample code block
 */
 .sg-codeblock {
   font-size: 14px;
-  border: 1px solid #111;
+  margin-bottom: 30px;
 }
 .sg-codeblock__toolbar {
   width: 100%;
@@ -11,6 +79,7 @@ sample code block
   background-color: #3d3d3e;
 }
 .sg-codeblock__btn {
+  position: relative;
   display: inline-block;
   height: 40px;
   line-height: 40px;
@@ -18,6 +87,19 @@ sample code block
   color: #76daff;
   text-align: center;
   cursor: pointer;
+}
+.sg-codeblock__btn:before {
+  content: '';
+  position: absolute;
+  display: none;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -10px;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-color: transparent;
+  border-style: solid dashed dashed dashed;
 }
 .sg-codeblock__radio {
   display: none;
@@ -28,13 +110,32 @@ sample code block
   color: #111;
   background-color: #ccc;
 }
+.sg-codeblock__radio--preview:checked ~ .sg-codeblock__toolbar .sg-codeblock__btn--preview:before,
+.sg-codeblock__radio--markup:checked  ~ .sg-codeblock__toolbar .sg-codeblock__btn--markup:before,
+.sg-codeblock__radio--script:checked  ~ .sg-codeblock__toolbar .sg-codeblock__btn--script:before {
+  display: block;
+  border-top-color: #ccc;
+}
 .sg-codeblock__body {
   overflow: auto;
+  border-bottom: 1px solid #ccc;
   max-height: 300px;
 }
 .sg-codeblock__detail {
   display: none;
+  padding: 30px;
 }
+.sg-codeblock__detail--other > pre,
+.sg-codeblock__detail--script > pre,
+.sg-codeblock__detail--markup > pre {
+  margin: -30px;
+}
+.sg-codeblock__detail--other > pre > .hljs,
+.sg-codeblock__detail--script > pre > .hljs,
+.sg-codeblock__detail--markup > pre > .hljs {
+  padding: 30px;
+}
+.sg-codeblock__detail--other,
 .sg-codeblock__radio--preview:checked ~ .sg-codeblock__body .sg-codeblock__detail--preview,
 .sg-codeblock__radio--markup:checked  ~ .sg-codeblock__body .sg-codeblock__detail--markup,
 .sg-codeblock__radio--script:checked  ~ .sg-codeblock__body .sg-codeblock__detail--script {
@@ -42,4 +143,232 @@ sample code block
 }
 .sg-codeblock__pre {
   margin: 0;
+  font-size: 16px;
+}
+.sg-main__homepage .hljs{
+  padding: 30px;
+  font-size: 16px;
+}
+
+/*
+markup
+*/
+.sg-markup {
+  
+}
+.sg-markup__item {
+  position: relative;
+  margin: 0 -20px;
+  padding: 20px;
+}
+.sg-markup__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #eee;
+}
+.sg-markup__label-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  border: 1px solid #eee;
+  border-top-width: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  font-weight: bold;
+}
+.sg-markup__description {
+  font-size: 12px;
+  color: #999;
+  margin-top: -13px;
+  margin-bottom: 8px;
+  margin-left: -11px;
+}
+.sg-markup__preview {
+
+}
+
+/*
+main contents
+*/
+.sg-main {
+  margin: 30px 30px 0;
+  padding: 10px 0;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.sg-main__head {}
+.sg-main__body {}
+
+/*
+heading
+*/
+.sg-description h1,
+.sg-description h2,
+.sg-description h3,
+.sg-description h4,
+.sg-description h5,
+.sg-description h6,
+.sg-main__homepage h1,
+.sg-main__homepage h2,
+.sg-main__homepage h3,
+.sg-main__homepage h4,
+.sg-main__homepage h5,
+.sg-main__homepage h6,
+.sg-heading {
+  position: relative;
+  color: #333;
+  padding: 0 30px;
+  margin: 0 0 20px;
+}
+.sg-heading__link {
+  position: absolute;
+  top: 0;
+  left: 9px;
+  bottom: 0;
+  display: block;
+  height: 14px;
+  line-height: 1;
+  margin: auto;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0;
+}
+.sg-heading:hover .sg-heading__link{
+  opacity: 0.8;
+}
+.sg-heading:hover .sg-heading__link:hover{
+  opacity: 1;
+}
+.sg-heading__icon {
+  display: block;
+  font-size: 14px;
+}
+.sg-heading__text {
+  font-weight: bold;
+}
+.sg-description h1,
+.sg-main__homepage h1,
+.sg-heading--depth-1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+.sg-description h2,
+.sg-main__homepage h2,
+.sg-heading--depth-2 {
+  font-size: 35px;
+}
+.sg-description h3,
+.sg-main__homepage h3,
+.sg-heading--depth-3 {
+  font-size: 25px;
+}
+.sg-description h4,
+.sg-main__homepage h4,
+.sg-heading--depth-4 {
+  font-size: 20px;
+}
+.sg-description h5,
+.sg-main__homepage h5,
+.sg-heading--depth-5 {
+  font-size: 18px;
+}
+.sg-description h6,
+.sg-main__homepage h6,
+.sg-heading--depth-6 {
+  font-size: 16px;
+}
+.sg-description h1,
+.sg-description h2,
+.sg-description h3,
+.sg-description h4,
+.sg-description h5,
+.sg-description h6 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*
+  Description
+*/
+.sg-main__homepage p {
+  margin-bottom: 30px;
+}
+.sg-main__homepage p,
+.sg-description {
+  font-size: 18px;
+  color: #333;
+  padding: 0 30px;
+}
+.sg-description p{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+/*
+table
+*/
+.sg-main__homepage table,
+.sg-description table{
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+}
+.sg-main__homepage table {
+  margin: 0 30px;
+  width: calc(100% - 60px);
+}
+.sg-main__homepage table thead th,
+.sg-description table thead th{
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  color: #ccc;
+}
+.sg-main__homepage table tbody tr,
+.sg-description table tbody tr{
+  border-top: 1px solid #eee;
+}
+.sg-main__homepage table tbody td,
+.sg-description table tbody td{
+  vertical-align: top;
+  padding: 10px 10px 10px 0;
+}
+
+/*
+Parameter
+*/
+.sg-parameter {
+  font-size: 14px;
+  color: #333;
+  margin: 0 30px 30px;
+  border-collapse: collapse;
+}
+.sg-parameter__head-name,
+.sg-parameter__head-description {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  color: #ccc;
+}
+.sg-parameter__head-description {
+  padding-left: 10px;
+}
+.sg-parameter__param {
+  border-top: 1px solid #eee;
+}
+.sg-parameter__name {
+  vertical-align: top;
+  width: 1%;
+  white-space: nowrap;
+  padding: 10px 10px 10px 0;
+}
+.sg-parameter__description {
+  vertical-align: top;
+  padding: 10px;
 }
