@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ja"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="ja"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="ja"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="ja"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="ja"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>MY Styleguide</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Styles for Template -->
+  <link rel="stylesheet" href="/styleguide/public/black-tie/css/black-tie.min.css">
+<link rel="stylesheet" href="/styleguide/public/kss.css">
+<link rel="stylesheet" href="/styleguide/public/highlight/monokai.css">
+<link rel="stylesheet" href="/styleguide/public/styles.css">
+<link rel="stylesheet" href="/css/styles.css">
+
+  <!-- /Styles for Template -->
+</head>
+<body>
+
+<div class="sg-layout">
+  <div class="sg-layout__side">
+    <div class="sg-docTitle">MY Styleguide</div>
+    <ul class="sg-sideNav">
+      <li class="sg-sideNav__item">
+        <a class="sg-sideNav__link" href="./">
+          <span class="sg-sideNav__text">Overview</span>
+        </a>
+      </li>
+      <li class="sg-sideNav__item">
+        <a class="sg-sideNav__link" href="section-javascript.html">
+          <span class="sg-sideNav__text">JavaScript</span>
+        </a>
+      <li class="sg-sideNav__item">
+        <a class="sg-sideNav__link" href="section-module.html">
+          <span class="sg-sideNav__text">Module</span>
+        </a>
+      <li class="sg-sideNav__item">
+        <a class="sg-sideNav__link" href="section-utility.html">
+          <span class="sg-sideNav__text">Utility</span>
+        </a>
+        <ul class="sg-sideNav">
+            <li class="sg-sideNav__item  sg-sideNav__item--depth-2">
+              <a class="sg-sideNav__link" href="section-utility.html#kssref-utility.inline-block">
+                <span class="sg-sideNav__text">inline-block</span>
+              </a>
+            </li>
+            <li class="sg-sideNav__item  sg-sideNav__item--depth-2">
+              <a class="sg-sideNav__link" href="section-utility.html#kssref-utility.rem">
+                <span class="sg-sideNav__text">rem</span>
+              </a>
+            </li>
+        </ul>
+    </ul>
+  </div>
+  <div class="sg-layout__main">
+
+    <div class="sg-main">
+
+
+      <div id="kssref-utility" class="sg-main__body  sg-main__body--depth-1">
+
+        <div class="sg-heading sg-heading--depth-1">
+          <a class="sg-heading__link" href="#kssref-utility">
+            <span class="sg-heading__icon"><span class="bts bt-link"></span></span>
+          </a>
+          <span class="sg-heading__text">Utility</span>
+        </div>
+
+        <div class="sg-description"><p>mixin and function category</p>
+</div>
+
+
+      </div>
+
+      <div id="kssref-utility.inline-block" class="sg-main__body  sg-main__body--depth-2">
+
+        <div class="sg-heading sg-heading--depth-2">
+          <a class="sg-heading__link" href="#kssref-utility.inline-block">
+            <span class="sg-heading__icon"><span class="bts bt-link"></span></span>
+          </a>
+          <span class="sg-heading__text">inline-block</span>
+        </div>
+
+        <div class="sg-description"><p>inline-block hack for old IE</p>
+</div>
+
+
+      </div>
+      <div class="sg-codeblock">
+        <div class="sg-codeblock__body">
+          <div class="sg-codeblock__detail  sg-codeblock__detail--other">
+            <pre class="sg-codeblock__pre"><code class="scss">.foo {
+  @include inline-block;
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="kssref-utility.rem" class="sg-main__body  sg-main__body--depth-2">
+
+        <div class="sg-heading sg-heading--depth-2">
+          <a class="sg-heading__link" href="#kssref-utility.rem">
+            <span class="sg-heading__icon"><span class="bts bt-link"></span></span>
+          </a>
+          <span class="sg-heading__text">rem</span>
+        </div>
+
+        <div class="sg-description"><p>convert px to rem</p>
+</div>
+
+        <table class="sg-parameter">
+          <thead class="sg-parameter__head">
+            <tr class="sg-parameter__head-titles">
+              <th class="sg-parameter__head-name">Name</th>
+              <th class="sg-parameter__head-description">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="sg-parameter__param">
+              <th class="sg-parameter__name">$size</th>
+              <td class="sg-parameter__description">font size (px)</td>
+            </tr>
+            <tr class="sg-parameter__param">
+              <th class="sg-parameter__name">$baseFontSize</th>
+              <td class="sg-parameter__description">base font size (px) <em>optional</em></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <div class="sg-codeblock">
+        <div class="sg-codeblock__body">
+          <div class="sg-codeblock__detail  sg-codeblock__detail--other">
+            <pre class="sg-codeblock__pre"><code class="scss">.foo {
+  font-size: rem(10); //1.0rem
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Script for Template -->
+<script src="/styleguide/public/kss.js"></script>
+<script src="/styleguide/public/highlight/highlight.pack.js"></script>
+<script src="/styleguide/public/init.js"></script>
+
+<!-- /Script for Template -->
+<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

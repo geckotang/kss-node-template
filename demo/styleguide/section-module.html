@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ja"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="ja"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="ja"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="ja"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="ja"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>MY Styleguide</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Styles for Template -->
+  <link rel="stylesheet" href="/styleguide/public/black-tie/css/black-tie.min.css">
+<link rel="stylesheet" href="/styleguide/public/kss.css">
+<link rel="stylesheet" href="/styleguide/public/highlight/monokai.css">
+<link rel="stylesheet" href="/styleguide/public/styles.css">
+<link rel="stylesheet" href="/css/styles.css">
+
+  <!-- /Styles for Template -->
+</head>
+<body>
+
+<div class="sg-layout">
+  <div class="sg-layout__side">
+    <div class="sg-docTitle">MY Styleguide</div>
+    <ul class="sg-sideNav">
+      <li class="sg-sideNav__item">
+        <a class="sg-sideNav__link" href="./">
+          <span class="sg-sideNav__text">Overview</span>
+        </a>
+      </li>
+      <li class="sg-sideNav__item">
+        <a class="sg-sideNav__link" href="section-javascript.html">
+          <span class="sg-sideNav__text">JavaScript</span>
+        </a>
+      <li class="sg-sideNav__item">
+        <a class="sg-sideNav__link" href="section-module.html">
+          <span class="sg-sideNav__text">Module</span>
+        </a>
+        <ul class="sg-sideNav">
+            <li class="sg-sideNav__item  sg-sideNav__item--depth-2">
+              <a class="sg-sideNav__link" href="section-module.html#kssref-module.button">
+                <span class="sg-sideNav__text">Button</span>
+              </a>
+            </li>
+          <li class="sg-sideNav__item  sg-sideNav__item--depth-3">
+            <a class="sg-sideNav__link" href="section-module.html#kssref-module.button.simple-button">
+              <span class="sg-sideNav__text">Simple Button</span>
+            </a>
+          </li>
+          <li class="sg-sideNav__item  sg-sideNav__item--depth-3">
+            <a class="sg-sideNav__link" href="section-module.html#kssref-module.button.simple-button2">
+              <span class="sg-sideNav__text">Simple Button2</span>
+            </a>
+          </li>
+            <li class="sg-sideNav__item  sg-sideNav__item--depth-2">
+              <a class="sg-sideNav__link" href="section-module.html#kssref-module.navigation">
+                <span class="sg-sideNav__text">Navigation</span>
+              </a>
+            </li>
+          <li class="sg-sideNav__item  sg-sideNav__item--depth-3">
+            <a class="sg-sideNav__link" href="section-module.html#kssref-module.navigation.buttonnav">
+              <span class="sg-sideNav__text">ButtonNav</span>
+            </a>
+          </li>
+        </ul>
+      <li class="sg-sideNav__item">
+        <a class="sg-sideNav__link" href="section-utility.html">
+          <span class="sg-sideNav__text">Utility</span>
+        </a>
+    </ul>
+  </div>
+  <div class="sg-layout__main">
+
+    <div class="sg-main">
+
+
+      <div id="kssref-module" class="sg-main__body  sg-main__body--depth-1">
+
+        <div class="sg-heading sg-heading--depth-1">
+          <a class="sg-heading__link" href="#kssref-module">
+            <span class="sg-heading__icon"><span class="bts bt-link"></span></span>
+          </a>
+          <span class="sg-heading__text">Module</span>
+        </div>
+
+        <div class="sg-description"><p>module category</p>
+</div>
+
+
+      </div>
+
+      <div id="kssref-module.button" class="sg-main__body  sg-main__body--depth-2">
+
+        <div class="sg-heading sg-heading--depth-2">
+          <a class="sg-heading__link" href="#kssref-module.button">
+            <span class="sg-heading__icon"><span class="bts bt-link"></span></span>
+          </a>
+          <span class="sg-heading__text">Button</span>
+        </div>
+
+        <div class="sg-description"><p>This is button.</p>
+</div>
+
+
+      </div>
+
+      <div id="kssref-module.button.simple-button" class="sg-main__body  sg-main__body--depth-3">
+
+        <div class="sg-heading sg-heading--depth-3">
+          <a class="sg-heading__link" href="#kssref-module.button.simple-button">
+            <span class="sg-heading__icon"><span class="bts bt-link"></span></span>
+          </a>
+          <span class="sg-heading__text">Simple Button</span>
+        </div>
+
+        <div class="sg-description"><pre><code class="lang-markdown">Markup:
+&lt;button class=&quot;simple-button {{modifier_class}}&quot;&gt;This is button&lt;/button&gt;
+
+:hover - hovered
+.simple-button--disabled - disabled button
+.simple-button--disabled:hover - disabled button
+</code></pre>
+</div>
+
+
+
+      <div class="sg-codeblock">
+        <input id="kss-codeblock-module.button.simple-button-preview" name="kss-codeblock-module.button.simple-button" class="sg-codeblock__radio  sg-codeblock__radio--preview" type="radio" checked>
+        <input id="kss-codeblock-module.button.simple-button-markup"  name="kss-codeblock-module.button.simple-button" class="sg-codeblock__radio  sg-codeblock__radio--markup"  type="radio">
+        <div class="sg-codeblock__toolbar">
+          <label for="kss-codeblock-module.button.simple-button-preview" class="sg-codeblock__btn  sg-codeblock__btn--preview">Preview</label>
+          <label for="kss-codeblock-module.button.simple-button-markup"  class="sg-codeblock__btn  sg-codeblock__btn--markup">HTML</label>
+        </div>
+        <div class="sg-codeblock__body">
+          <div class="sg-codeblock__detail  sg-codeblock__detail--preview">
+            <div class="sg-markup">
+              <div class="sg-markup__item">
+                <div class="sg-markup__label"><span class="sg-markup__label-text">default</span></div>
+                <div class="sg-markup__preview"><button class="simple-button ">This is button</button></div>
+              </div>
+              <div class="sg-markup__item">
+                <div class="sg-markup__label"><div class="sg-markup__label-text">:hover</div></div>
+                <div class="sg-markup__description">hovered</div>
+                <div class="sg-markup__preview"><button class="simple-button pseudo-class-hover">This is button</button></div>
+              </div>
+              <div class="sg-markup__item">
+                <div class="sg-markup__label"><div class="sg-markup__label-text">.simple-button--disabled</div></div>
+                <div class="sg-markup__description">disabled button</div>
+                <div class="sg-markup__preview"><button class="simple-button simple-button--disabled">This is button</button></div>
+              </div>
+              <div class="sg-markup__item">
+                <div class="sg-markup__label"><div class="sg-markup__label-text">.simple-button--disabled:hover</div></div>
+                <div class="sg-markup__description">disabled button</div>
+                <div class="sg-markup__preview"><button class="simple-button simple-button--disabled pseudo-class-hover">This is button</button></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="sg-codeblock__detail  sg-codeblock__detail--markup">
+            <pre class="sg-codeblock__pre html"><code class="html">&lt;button class=&quot;simple-button &quot;&gt;This is button&lt;/button&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="kssref-module.button.simple-button2" class="sg-main__body  sg-main__body--depth-3">
+
+        <div class="sg-heading sg-heading--depth-3">
+          <a class="sg-heading__link" href="#kssref-module.button.simple-button2">
+            <span class="sg-heading__icon"><span class="bts bt-link"></span></span>
+          </a>
+          <span class="sg-heading__text">Simple Button2</span>
+        </div>
+
+        <div class="sg-description"><pre><code class="lang-markdown">Markup:
+&lt;button class=&quot;simple-button2 {{modifier_class}}&quot;&gt;This is button&lt;/button&gt;
+
+:hover - hovered
+.simple-button2--disabled - disabled button
+.simple-button2--disabled:hover - disabled button
+</code></pre>
+</div>
+
+
+
+      <div class="sg-codeblock">
+        <input id="kss-codeblock-module.button.simple-button2-preview" name="kss-codeblock-module.button.simple-button2" class="sg-codeblock__radio  sg-codeblock__radio--preview" type="radio" checked>
+        <input id="kss-codeblock-module.button.simple-button2-markup"  name="kss-codeblock-module.button.simple-button2" class="sg-codeblock__radio  sg-codeblock__radio--markup"  type="radio">
+        <div class="sg-codeblock__toolbar">
+          <label for="kss-codeblock-module.button.simple-button2-preview" class="sg-codeblock__btn  sg-codeblock__btn--preview">Preview</label>
+          <label for="kss-codeblock-module.button.simple-button2-markup"  class="sg-codeblock__btn  sg-codeblock__btn--markup">HTML</label>
+        </div>
+        <div class="sg-codeblock__body">
+          <div class="sg-codeblock__detail  sg-codeblock__detail--preview">
+            <div class="sg-markup">
+              <div class="sg-markup__item">
+                <div class="sg-markup__label"><span class="sg-markup__label-text">default</span></div>
+                <div class="sg-markup__preview"><button class="simple-button2 ">This is button</button></div>
+              </div>
+              <div class="sg-markup__item">
+                <div class="sg-markup__label"><div class="sg-markup__label-text">:hover</div></div>
+                <div class="sg-markup__description">hovered</div>
+                <div class="sg-markup__preview"><button class="simple-button2 pseudo-class-hover">This is button</button></div>
+              </div>
+              <div class="sg-markup__item">
+                <div class="sg-markup__label"><div class="sg-markup__label-text">.simple-button2--disabled</div></div>
+                <div class="sg-markup__description">disabled button</div>
+                <div class="sg-markup__preview"><button class="simple-button2 simple-button2--disabled">This is button</button></div>
+              </div>
+              <div class="sg-markup__item">
+                <div class="sg-markup__label"><div class="sg-markup__label-text">.simple-button2--disabled:hover</div></div>
+                <div class="sg-markup__description">disabled button</div>
+                <div class="sg-markup__preview"><button class="simple-button2 simple-button2--disabled pseudo-class-hover">This is button</button></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="sg-codeblock__detail  sg-codeblock__detail--markup">
+            <pre class="sg-codeblock__pre html"><code class="html">&lt;button class=&quot;simple-button2 &quot;&gt;This is button&lt;/button&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="kssref-module.navigation" class="sg-main__body  sg-main__body--depth-2">
+
+        <div class="sg-heading sg-heading--depth-2">
+          <a class="sg-heading__link" href="#kssref-module.navigation">
+            <span class="sg-heading__icon"><span class="bts bt-link"></span></span>
+          </a>
+          <span class="sg-heading__text">Navigation</span>
+        </div>
+
+        <div class="sg-description"><p>navigation</p>
+</div>
+
+
+      </div>
+
+      <div id="kssref-module.navigation.buttonnav" class="sg-main__body  sg-main__body--depth-3">
+
+        <div class="sg-heading sg-heading--depth-3">
+          <a class="sg-heading__link" href="#kssref-module.navigation.buttonnav">
+            <span class="sg-heading__icon"><span class="bts bt-link"></span></span>
+          </a>
+          <span class="sg-heading__text">ButtonNav</span>
+        </div>
+
+        <div class="sg-description"><p>This is list for button.</p>
+<pre><code class="lang-markdown">Markup:
+&lt;ul class=&quot;buttonNav&quot;&gt;
+  &lt;li class=&quot;buttonNav__item&quot;&gt;{{&gt; &quot;module.button.simple-button&quot; }}&lt;/li&gt;
+  &lt;li class=&quot;buttonNav__item&quot;&gt;{{&gt; &quot;module.button.simple-button&quot; modifier_class=&quot;simple-button--disabled&quot; }}&lt;/li&gt;
+  &lt;li class=&quot;buttonNav__item&quot;&gt;{{&gt; &quot;module.button.simple-button&quot; }}&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+</div>
+
+
+
+      <div class="sg-codeblock">
+        <input id="kss-codeblock-module.navigation.buttonnav-preview" name="kss-codeblock-module.navigation.buttonnav" class="sg-codeblock__radio  sg-codeblock__radio--preview" type="radio" checked>
+        <input id="kss-codeblock-module.navigation.buttonnav-markup"  name="kss-codeblock-module.navigation.buttonnav" class="sg-codeblock__radio  sg-codeblock__radio--markup"  type="radio">
+        <div class="sg-codeblock__toolbar">
+          <label for="kss-codeblock-module.navigation.buttonnav-preview" class="sg-codeblock__btn  sg-codeblock__btn--preview">Preview</label>
+          <label for="kss-codeblock-module.navigation.buttonnav-markup"  class="sg-codeblock__btn  sg-codeblock__btn--markup">HTML</label>
+        </div>
+        <div class="sg-codeblock__body">
+          <div class="sg-codeblock__detail  sg-codeblock__detail--preview">
+            <div class="sg-markup">
+              <div class="sg-markup__item">
+                <div class="sg-markup__preview"><ul class="buttonNav">
+  <li class="buttonNav__item"><button class="simple-button ">This is button</button></li>
+  <li class="buttonNav__item"><button class="simple-button simple-button--disabled">This is button</button></li>
+  <li class="buttonNav__item"><button class="simple-button ">This is button</button></li>
+</ul></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="sg-codeblock__detail  sg-codeblock__detail--markup">
+            <pre class="sg-codeblock__pre html"><code class="html">&lt;ul class=&quot;buttonNav&quot;&gt;
+  &lt;li class=&quot;buttonNav__item&quot;&gt;&lt;button class=&quot;simple-button &quot;&gt;This is button&lt;/button&gt;&lt;/li&gt;
+  &lt;li class=&quot;buttonNav__item&quot;&gt;&lt;button class=&quot;simple-button simple-button--disabled&quot;&gt;This is button&lt;/button&gt;&lt;/li&gt;
+  &lt;li class=&quot;buttonNav__item&quot;&gt;&lt;button class=&quot;simple-button &quot;&gt;This is button&lt;/button&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Script for Template -->
+<script src="/styleguide/public/kss.js"></script>
+<script src="/styleguide/public/highlight/highlight.pack.js"></script>
+<script src="/styleguide/public/init.js"></script>
+
+<!-- /Script for Template -->
+<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

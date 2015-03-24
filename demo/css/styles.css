@@ -1,0 +1,210 @@
+/*
+Module
+
+module category
+
+Styleguide module
+*/
+/*
+Button
+
+This is button.
+
+Styleguide module.button
+*/
+/*
+Simple Button
+
+```markdown
+Markup:
+<button class="simple-button {{modifier_class}}">This is button</button>
+
+:hover - hovered
+.simple-button--disabled - disabled button
+.simple-button--disabled:hover - disabled button
+```
+
+Markup:
+<button class="simple-button {{modifier_class}}">This is button</button>
+
+:hover - hovered
+.simple-button--disabled - disabled button
+.simple-button--disabled:hover - disabled button
+
+Styleguide module.button.simple-button
+*/
+.simple-button {
+  width: 100px;
+  height: 50px;
+  -webkit-appearance: none;
+  border: 3px solid #ccc;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer; }
+  .simple-button:hover {
+    border-color: tomato; }
+  .simple-button--disabled {
+    cursor: default;
+    color: #eee;
+    background-color: #ccc; }
+    .simple-button--disabled:hover {
+      border-color: #ccc; }
+
+/*
+Simple Button2
+
+```markdown
+Markup:
+<button class="simple-button2 {{modifier_class}}">This is button</button>
+
+:hover - hovered
+.simple-button2--disabled - disabled button
+.simple-button2--disabled:hover - disabled button
+```
+
+Markup:
+<button class="simple-button2 {{modifier_class}}">This is button</button>
+
+:hover - hovered
+.simple-button2--disabled - disabled button
+.simple-button2--disabled:hover - disabled button
+
+Styleguide module.button.simple-button2
+*/
+.simple-button2 {
+  width: 200px;
+  height: 50px;
+  -webkit-appearance: none;
+  border: 3px solid #ccc;
+  background-color: transparent;
+  cursor: pointer; }
+  .simple-button2:hover {
+    border-color: tomato; }
+  .simple-button2--disabled {
+    cursor: default;
+    color: #eee;
+    background-color: #ccc; }
+    .simple-button2--disabled:hover {
+      border-color: #ccc; }
+
+/*
+Navigation
+
+navigation
+
+Styleguide module.navigation
+*/
+/*
+ButtonNav
+
+This is list for button.
+
+```markdown
+Markup:
+<ul class="buttonNav">
+  <li class="buttonNav__item">{{> "module.button.simple-button" }}</li>
+  <li class="buttonNav__item">{{> "module.button.simple-button" modifier_class="simple-button--disabled" }}</li>
+  <li class="buttonNav__item">{{> "module.button.simple-button" }}</li>
+</ul>
+```
+
+Markup:
+<ul class="buttonNav">
+  <li class="buttonNav__item">{{> "module.button.simple-button" }}</li>
+  <li class="buttonNav__item">{{> "module.button.simple-button" modifier_class="simple-button--disabled" }}</li>
+  <li class="buttonNav__item">{{> "module.button.simple-button" }}</li>
+</ul>
+
+Styleguide module.navigation.buttonNav
+*/
+.buttonNav {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none; }
+  .buttonNav__item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    text-align: center; }
+
+/*
+JavaScript
+
+JavaScript category
+
+Styleguide javascript
+*/
+/*
+Click and alert
+
+Please click this button, and then alert dialog will be shown.
+
+```markdown
+Markup:
+<button class="simple-button" onclick="MyClick()">Click me</button>
+
+Script:
+function MyClick() {
+  alert('The quick brown fox jumps over the lazy dog.');
+```
+
+Markup:
+<button class="simple-button" onclick="MyClick()">Click me</button>
+
+Script:
+function MyClick() {
+  alert('The quick brown fox jumps over the lazy dog.');
+}
+
+Exec_Script: true
+
+Styleguide javascript.click-and-alert
+*/
+/*
+Utility
+
+mixin and function category
+
+Styleguide utility
+*/
+/*
+inline-block
+
+inline-block hack for old IE
+
+Scss_Usage:
+.foo {
+  @include inline-block;
+}
+
+Styleguide utility.inline-block
+*/
+/*
+rem
+
+convert px to rem
+
+Scss_Usage:
+.foo {
+  font-size: rem(10); //1.0rem
+}
+
+$size - font size (px)
+$baseFontSize - base font size (px) *optional*
+
+Styleguide utility.rem
+*/

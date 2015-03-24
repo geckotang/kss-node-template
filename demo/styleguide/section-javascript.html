@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ja"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="ja"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="ja"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="ja"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="ja"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>MY Styleguide</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Styles for Template -->
+  <link rel="stylesheet" href="/styleguide/public/black-tie/css/black-tie.min.css">
+<link rel="stylesheet" href="/styleguide/public/kss.css">
+<link rel="stylesheet" href="/styleguide/public/highlight/monokai.css">
+<link rel="stylesheet" href="/styleguide/public/styles.css">
+<link rel="stylesheet" href="/css/styles.css">
+
+  <!-- /Styles for Template -->
+</head>
+<body>
+
+<div class="sg-layout">
+  <div class="sg-layout__side">
+    <div class="sg-docTitle">MY Styleguide</div>
+    <ul class="sg-sideNav">
+      <li class="sg-sideNav__item">
+        <a class="sg-sideNav__link" href="./">
+          <span class="sg-sideNav__text">Overview</span>
+        </a>
+      </li>
+      <li class="sg-sideNav__item">
+        <a class="sg-sideNav__link" href="section-javascript.html">
+          <span class="sg-sideNav__text">JavaScript</span>
+        </a>
+        <ul class="sg-sideNav">
+            <li class="sg-sideNav__item  sg-sideNav__item--depth-2">
+              <a class="sg-sideNav__link" href="section-javascript.html#kssref-javascript.click-and-alert">
+                <span class="sg-sideNav__text">Click and alert</span>
+              </a>
+            </li>
+        </ul>
+      <li class="sg-sideNav__item">
+        <a class="sg-sideNav__link" href="section-module.html">
+          <span class="sg-sideNav__text">Module</span>
+        </a>
+      <li class="sg-sideNav__item">
+        <a class="sg-sideNav__link" href="section-utility.html">
+          <span class="sg-sideNav__text">Utility</span>
+        </a>
+    </ul>
+  </div>
+  <div class="sg-layout__main">
+
+    <div class="sg-main">
+
+
+      <div id="kssref-javascript" class="sg-main__body  sg-main__body--depth-1">
+
+        <div class="sg-heading sg-heading--depth-1">
+          <a class="sg-heading__link" href="#kssref-javascript">
+            <span class="sg-heading__icon"><span class="bts bt-link"></span></span>
+          </a>
+          <span class="sg-heading__text">JavaScript</span>
+        </div>
+
+        <div class="sg-description"><p>JavaScript category</p>
+</div>
+
+
+      </div>
+
+      <div id="kssref-javascript.click-and-alert" class="sg-main__body  sg-main__body--depth-2">
+
+        <div class="sg-heading sg-heading--depth-2">
+          <a class="sg-heading__link" href="#kssref-javascript.click-and-alert">
+            <span class="sg-heading__icon"><span class="bts bt-link"></span></span>
+          </a>
+          <span class="sg-heading__text">Click and alert</span>
+        </div>
+
+        <div class="sg-description"><p>Please click this button, and then alert dialog will be shown.</p>
+<pre><code class="lang-markdown">Markup:
+&lt;button class=&quot;simple-button&quot; onclick=&quot;MyClick()&quot;&gt;Click me&lt;/button&gt;
+
+Script:
+function MyClick() {
+  alert(&#39;The quick brown fox jumps over the lazy dog.&#39;);
+</code></pre>
+</div>
+
+
+
+      <div class="sg-codeblock">
+        <input id="kss-codeblock-javascript.click-and-alert-preview" name="kss-codeblock-javascript.click-and-alert" class="sg-codeblock__radio  sg-codeblock__radio--preview" type="radio" checked>
+        <input id="kss-codeblock-javascript.click-and-alert-markup"  name="kss-codeblock-javascript.click-and-alert" class="sg-codeblock__radio  sg-codeblock__radio--markup"  type="radio">
+        <input id="kss-codeblock-javascript.click-and-alert-script"  name="kss-codeblock-javascript.click-and-alert" class="sg-codeblock__radio  sg-codeblock__radio--script" type="radio">
+        <div class="sg-codeblock__toolbar">
+          <label for="kss-codeblock-javascript.click-and-alert-preview" class="sg-codeblock__btn  sg-codeblock__btn--preview">Preview</label>
+          <label for="kss-codeblock-javascript.click-and-alert-markup"  class="sg-codeblock__btn  sg-codeblock__btn--markup">HTML</label>
+          <label for="kss-codeblock-javascript.click-and-alert-script" class="sg-codeblock__btn  sg-codeblock__btn--script">JS</label>
+        </div>
+        <div class="sg-codeblock__body">
+          <div class="sg-codeblock__detail  sg-codeblock__detail--preview">
+            <div class="sg-markup">
+              <div class="sg-markup__item">
+                <div class="sg-markup__preview"><button class="simple-button" onclick="MyClick()">Click me</button></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="sg-codeblock__detail  sg-codeblock__detail--markup">
+            <pre class="sg-codeblock__pre html"><code class="html">&lt;button class=&quot;simple-button&quot; onclick=&quot;MyClick()&quot;&gt;Click me&lt;/button&gt;</code></pre>
+          </div>
+          <div class="sg-codeblock__detail  sg-codeblock__detail--script">
+            <pre class="sg-codeblock__pre"><code class="javascript">function MyClick() {
+  alert('The quick brown fox jumps over the lazy dog.');
+}</code></pre>
+            <script>function MyClick() {
+  alert('The quick brown fox jumps over the lazy dog.');
+}</script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Script for Template -->
+<script src="/styleguide/public/kss.js"></script>
+<script src="/styleguide/public/highlight/highlight.pack.js"></script>
+<script src="/styleguide/public/init.js"></script>
+
+<!-- /Script for Template -->
+<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>
