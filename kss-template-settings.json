@@ -4,16 +4,16 @@
   "source": "src/scss",
   "mask": "*.css|*.less|*.sass|*.scss|*.styl|*.stylus",
   "css": [
-    "/styleguide/public/black-tie/css/black-tie.min.css",
-    "/styleguide/public/kss.css",
-    "/styleguide/public/highlight/monokai.css",
-    "/styleguide/public/styles.css",
-    "/css/styles.css"
+    "./public/black-tie/css/black-tie.min.css",
+    "./public/kss.css",
+    "./public/highlight/monokai.css",
+    "./public/styles.css",
+    "../css/styles.css"
   ],
   "js": [
-    "/styleguide/public/kss.js",
-    "/styleguide/public/highlight/highlight.pack.js",
-    "/styleguide/public/init.js"
+    "./public/kss.js",
+    "./public/highlight/highlight.pack.js",
+    "./public/init.js"
   ],
   "custom": ["Script", "Exec_Script", "Scss_Usage"]
 }
