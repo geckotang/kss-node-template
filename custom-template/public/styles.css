@@ -7,14 +7,16 @@ html,body {
 }
 .sg-layout {
   display: table;
+  table-layout: fixed;
   width: 100vw;
   height: 100vh;
 }
 .sg-layout__side {
   display: table-cell;
   vertical-align: top;
-  width: 20vw;
+  width: 250px;
   background-color: #171d22;
+  overflow: auto;
 }
 .sg-layout__main {
   display: table-cell;
@@ -371,8 +373,10 @@ Parameter
   width: 1%;
   white-space: nowrap;
   padding: 10px 10px 10px 0;
+  text-align: left;
 }
 .sg-parameter__description {
   vertical-align: top;
   padding: 10px;
+  text-align: left;
 }
