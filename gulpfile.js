@@ -16,7 +16,8 @@ var sassDestDir = 'demo/css/';
 gulp.task('serve', function() {
   var timer;
   browserSync({
-      server: demoDir
+    startPath: "/styleguide/",
+    server: demoDir
   });
   gulp.watch(sassSrc, ['sass']);
   gulp.watch(
