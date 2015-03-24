@@ -52,6 +52,10 @@ side navigation
 .sg-sideNav__item--depth-2 {
   font-weight: normal;
 }
+.sg-sideNav__item--depth-3 {
+  font-weight: normal;
+  padding-left: 20px;
+}
 .sg-sideNav__link {
   display: block;
   padding: 5px 0;

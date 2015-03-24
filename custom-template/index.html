@@ -45,6 +45,13 @@
               </a>
             </li>
           {{/ifDepth}}
+          {{#ifDepth 3}}
+          <li class="sg-sideNav__item  sg-sideNav__item--depth-{{depth}}">
+            <a class="sg-sideNav__link" href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">
+              <span class="sg-sideNav__text">{{header}}</span>
+            </a>
+          </li>
+          {{/ifDepth}}
         {{/eachSection}}
         </ul>
       {{/ifReference}}
